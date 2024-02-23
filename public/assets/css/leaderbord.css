@@ -1,0 +1,10 @@
+body {
+    background-image: url("https://i.pinimg.com/originals/45/df/e8/45dfe8183ba1b710b28e172a295c9970.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+a :hover {
+    cursor: url("/assets/images/icon_search.png"), auto;
+}

@@ -1,0 +1,54 @@
+body {
+    background-image: url('../images/bk\ opm.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.white-square1 {
+    background-color: white;
+    width: 400px;
+    height: 250px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid black;
+} 
+nav{
+    background-color: white;
+}
+
+.contact {
+    justify-content: center;
+    display: flex;
+}
+
+b{
+    align-content: center;
+}
+
+.content {
+	padding: 20px;
+}
+
+.form {
+    padding: 40px;
+}
+
+.form {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid black;
+}
+
+.content {
+    border-radius: 10px;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+}

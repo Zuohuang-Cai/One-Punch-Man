@@ -1,0 +1,42 @@
+{% extends "layouts/app.twig" %}
+{% block header %}
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+              crossorigin="anonymous">
+
+{% endblock %}
+{% block body %}
+    <h1>Create Recipe</h1>
+    <div class="container">
+        <form action="./create" method="post">
+            <input type="text" name="Name" class="form-control" placeholder="Name">
+            <select class="form-select" name="Type" aria-label="Default select example">
+                <option selected disabled>Type</option>
+                <option value="breakfast">breakfast</option>
+                <option value="lunch">lunch</option>
+                <option value="dinner">dinner</option>
+            </select>
+            <select class="form-select" name="Kitchen" aria-label="Default select example">
+                <option selected disabled>Kitchen</option>
+                <option value="Franse keuken">Franse keuken</option>
+                <option value="Chinese keuken">Chinese keuken</option>
+                <option value="Hollandse keuken">Hollandse keuken</option>
+                <option value="Mediterraans keuken">Mediterraans</option>
+            </select>
+            <select class="form-select" name="Level" aria-label="Default select example">
+                <option selected disabled>Level</option>
+                <option value="easy">easy</option>
+                <option value="medium">medium</option>
+                <option value="hard">hard</option>
+            </select>
+            <a href="http://localhost" class="btn btn-primary">Back</a>
+            <button class="btn btn-primary" type="submit">Create</button>
+        </form>
+    </div>
+
+{% endblock %}

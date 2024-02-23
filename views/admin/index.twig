@@ -1,0 +1,72 @@
+{% extends "layouts/admin.twig" %}
+
+{% block header %}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+              crossorigin="anonymous">
+        <link rel="stylesheet" href="/assets/css/admin.css">
+    </head>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h2 style="text-align: center; padding-top: 15px; font-size:50px">Add a Hero</h2>
+        <form action="/api/CreateHero" method="post">
+            <label for="id">hero_id:</label>
+            <input type="text" id="id" name="hero_id" required>
+
+            <label for="nickname">Nickname:</label>
+            <input type="text" id="nickname" name="nickname" required>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="image">Image:</label>
+            <input type="url" id="image" name="image" required>
+
+            <label for="history"> Hero History Information:</label>
+            <textarea id="history" name="heroHistoryInfo" required></textarea>
+
+            <label for="background">Background:</label>
+            <textarea id="background" name="background" required></textarea>
+
+            <label for="powername">Power:</label>
+            <input type="text" id="powername" name="powername" required>
+
+            <label for="powerdescription">power description:</label>
+            <input type="text" id="powerdescription" name="powerdescription" required>
+
+
+            <label for="backgroundImage">Background Image:</label>
+            <input type="url" id="backgroundImage" name="backgroundimage" required>
+
+            <label for="backgroundImage">Background Image:</label>
+            <input type="url" id="backgroundImage" name="backgroundimage" required>
+            <div class="buttons" style="padding-bottom:30px">
+                <button type="submit">Create</button>
+                <button type="button" onclick="editaction()">edit</button>
+                <button type="button" onclick="deleteaction()">delete</button>
+                <button type="button" onclick="addpoweraction()">AddPower</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script src="/assets/js/admin.js"></script>
+{% endblock %}
+
+
+

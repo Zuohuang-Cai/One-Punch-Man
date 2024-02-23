@@ -1,0 +1,2 @@
+CREATE USER 'bit_academy'@'localhost' IDENTIFIED BY 'bit_academy';
+GRANT ALL PRIVILEGES ON *.* TO 'bit_academy'@'localhost' WITH GRANT OPTION;
