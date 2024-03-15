@@ -26,6 +26,12 @@ class AdminController extends \Controllers\BaseController
         $this->zephyr->displaytemplate($Page);
     }
 
+    public function logout(string $Page = "home/index.twig")
+    {
+        session_destroy();
+        $this->zephyr->displaytemplate($Page);
+    }
+
     public function login(string $Page = "admin/login.twig")
     {
         $this->zephyr->displaytemplate($Page);

@@ -134,10 +134,12 @@ class ApiController
     public function checklogPost()
     {
         session_start();
-        $user = R::findOne("admins", ' username = ? ', [$_POST['username']]);
-        if ($user->password == $_POST['password']) {
+        $user = R::findOne("admins", ' username = ? AND password = ? ', [$_POST['username'], $_POST['password']]);
+        if ($user) {
             $_SESSION['user'] = $user;
             session_write_close();
+        } else {
+            $this->zephyr->displaytemplate("admin/login.twig", ["message" => "Wrong username or password"]);
         }
         header("Location: /admin");
     }
