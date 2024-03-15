@@ -12,18 +12,16 @@
               crossorigin="anonymous">
         <link rel="stylesheet" href="/assets/css/register.css">
     </head>
-    
+
 {% endblock %}
 {% block body %}
-<div class = "container">
-    <form>
-        <input type="text" name="Name" required placeholder="Name"><br><br>
-        <input type="text" name="Nickname" required placeholder="Nickname"><br><br>
-        <input type="text" name="Background" required placeholder="Background"><br><br>
-        <input type="text" name="Age" required placeholder="Age"><br><br>
-        <input type="text" name="email" required placeholder="E-mail"><br><br>
-        <input type="submit" name="update" required placeholder="update data"><br><br>
-    </form>
-</div>
+    <div class="container">
+        <form action="/register/createadmin" method="post">
+            <input type="text" name="username" required placeholder="userame"><br><br>
+            <input type="text" name="password" required placeholder="password"><br><br>
+            <input type="text" name="confirm" required placeholder="confirm password"><br><br>
+            <input type="submit" name="update" required placeholder="Register"><br><br>
+        </form>
+    </div>
 {% endblock %}
 

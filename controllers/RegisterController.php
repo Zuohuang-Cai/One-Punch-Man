@@ -39,6 +39,21 @@ class RegisterController extends \Controllers\BaseController
         }
     }
 
+    public function createadminPost(string $Page = "error.twig")
+    {
+        $unique = R::findOne('admins', 'username = ?', [$_POST['username']]);
+        if (isset($unique)) {
+            $this->zephyr->displaytemplate($Page, ["ErrorHeader" => "Error", "ErrorBody" => "Admin already exists"]);
+        } elseif ($_POST['password'] !== $_POST['confirm']) {
+            $this->zephyr->displaytemplate($Page, ["ErrorHeader" => "Error", "ErrorBody" => "Passwords do not match"]);
+        }
+        $admin = R::dispense('admins');
+        $admin->username = $_POST['username'];
+        $admin->password = $_POST['password'];
+        R::store($admin);
+        $this->zephyr->displaytemplate($Page, ["ErrorHeader" => "Success", "ErrorBody" => "Admin Created"]);
+    }
+
     public function create(string $Page = "registers/create.twig")
     {
         $this->zephyr->displaytemplate($Page);

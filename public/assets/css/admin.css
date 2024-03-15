@@ -7,9 +7,10 @@ body {
     background-color: #e8e4e4;
 }
 
-h2{
+h2 {
     font-family: Protest Guerrilla;
 }
+
 /* Header styles */
 header {
     background-color: #333;
@@ -63,6 +64,7 @@ button {
     border: none;
     cursor: pointer;
 }
+
 
 .protest-guerrilla-regular {
     font-family: "Protest Guerrilla", sans-serif;

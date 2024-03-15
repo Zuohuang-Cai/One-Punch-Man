@@ -331,6 +331,7 @@ foreach ($heros as $heroData) {
     $hero->elo = 0;
     R::store($hero);
 }
+
 $admin = R::dispense('admins');
 $admin->username = "admin";
 $admin->password = "admin";
