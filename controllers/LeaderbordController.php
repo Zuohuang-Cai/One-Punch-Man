@@ -7,7 +7,7 @@ require "../vendor/autoload.php";
 use RedBeanPHP\R;
 use function bin\setup;
 
-class LeaderbordController extends \Controllers\BaseController
+class LeaderbordController
 {
     private $zephyr;
     protected array $recipes;

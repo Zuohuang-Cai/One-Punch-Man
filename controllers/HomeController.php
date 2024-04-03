@@ -36,7 +36,7 @@ class HomeController extends \Controllers\BaseController
             $this->zephyr->error('404.twig', ['message' => "No recipe ID specified!"]);
             return;
         }
-        $result = $this->getBeanById("home", $_GET['id']);
+        $result = R::findOne("home", ' id = ? ', [$_GET['id']]);
         $kitchen = R::findOne('registers', 'id = ?', [$result->kitchens_id]);
         if (isset($result)) {
             $this->zephyr->displaytemplate($Page, ['Kitchen' => $kitchen->name, 'data' => $result]);
